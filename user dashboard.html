@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+     <title>International Library</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <script src="index.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        h3 span {
+            font-size: 22px;
+        }
+        h3 input.search-input {
+            width: 300px;
+            margin-left: auto;
+            float: right
+        }
+        .mt32 {
+            margin-top: 32px;
+        }
+    </style>
+</head>
+<body class="mt32">
+<div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">International <span class="logo_colour">Library</span></a></h1>
+          <h2>Online platform for all book lovers!.</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <li class="selected"><a href="Student Dashboard.html">Student Dashboard</a></li>
+           <li><a href="user profile.html">user Profile</a></li>
+           <li><a href="user login.html">Log out</a></li>
+        </ul> 
+     </div>
+     <br></br>
+     <br></br>
+     <br></br>
+    <div class="container">
+        <h3>
+            <span>Book Details</span>
+            <input type="search" placeholder="Search..." class="form-control search-input" data-table="customers-list"/>
+        </h3>
+        <table id="table" class="table table-striped mt32 customers-list" >
+            <thead>
+                <tr>
+                    <th>Serial no</th>
+                    <th>Book id</th>
+                    <th>Book Name</th>
+                    <th>author name</th>
+                    <th>Availability</th>
+                    <th>Issue</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ana Trujillo</td>
+                    <td>Ana.trujillo@gmail.com</td>
+                    <td>050214</td>
+                    <td>Yes</td>
+                      <td><button type="button" class="cancelbtn">ISSUE</button></td>
+
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Antonio Moreno</td>
+                    <td>antoniomoreno2@gmail.com</td>
+                    <td>12209</td>
+                    <td>Yes</td>
+                      <td><button type="button" class="cancelbtn">ISSUE</button></td>
+            
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Maria Anders</td>
+                    <td>mariaanders@yahoo.com</td>
+                    <td>05021</td>
+                    <td>Yes</td>
+                      <td><button type="button" class="cancelbtn">ISSUE</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Thomas Hardy</td>
+                    <td>hardythomas.90@gmail.com</td>
+                    <td>WA1 1DP</td>
+                    <td>Yes</td>
+                    <td><button type="button" class="cancelbtn">ISSUE</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Christina Berglund</td>
+                    <td>christina@outlook.com</td>
+                    <td>S-958 22</td>
+                    <td>Yes</td>
+                      <td><button type="button" class="cancelbtn">ISSUE</button></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Davolio Nancy</td>
+                    <td>nancy.davolio@gmail.com</td>
+                    <td>810025</td>
+                    <td>Yes</td>
+                      <td><button type="button" class="cancelbtn">ISSUE</button></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Fuller Andrew</td>
+                    <td>andrew.10@yahoo.com</td>
+                    <td>W23 458</td>
+                    <td>Yes</td>
+                     <td><button type="button" class="cancelbtn">ISSUE</button></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Leverling Janet</td>
+                    <td>leverling.j@gmail.com</td>
+                    <td>T5A 0B5</td>
+                    <td>Yes</td>
+                    <td><button type="button" class="cancelbtn">ISSUE</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        <style>
+            td:hover{background-color:#ddd;;cursor: pointer}
+            .selected{background-color: red;color: #fff;font-weight: bold}
+        </style>
+    </head>
+    <body>
+       
+        <table id="table" border="1">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            
+            <tr>
+                <td>FN1</td>
+                <td>LN1</td>
+                <td>10</td>
+            </tr>
+            
+            <tr>
+                <td>FN2</td>
+                <td>LN2</td>
+                <td>20</td>
+            </tr>
+            
+            <tr>
+                <td>FN3</td>
+                <td class="selected">LN3</td>
+                <td>30</td>
+            </tr>
+            
+            <tr>
+                <td>FN4</td>
+                <td>LN4</td>
+                <td>40</td>
+            </tr>
+            
+            <tr>
+                <td>FN5</td>
+                <td>LN5</td>
+                <td>50</td>
+            </tr>
+        </table>
+        
+        <script>
+            
+            var table = document.getElementById("table"),rIndex,cIndex;
+            
+            // table rows
+            for(var i = 1; i < table.rows.length; i++)
+            {
+                // row cells
+                for(var j = 0; j < table.rows[i].cells.length; j++)
+                {
+                    table.rows[i].cells[j].onclick = function()
+                    {
+                        rIndex = this.parentElement.rowIndex;
+                        cIndex = this.cellIndex+1;
+                        console.log("Row : "+rIndex+" , Cell : "+cIndex);
+                    };
+                }
+            }
+            
+        </script>
+    <script>
+        (function(document) {
+            'use strict';
+
+            var TableFilter = (function(myArray) {
+                var search_input;
+
+                function _onInputSearch(e) {
+                    search_input = e.target;
+                    var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+                    myArray.forEach.call(tables, function(table) {
+                        myArray.forEach.call(table.tBodies, function(tbody) {
+                            myArray.forEach.call(tbody.rows, function(row) {
+                                var text_content = row.textContent.toLowerCase();
+                                var search_val = search_input.value.toLowerCase();
+                                row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                            });
+                        });
+                    });
+                }
+
+                return {
+                    init: function() {
+                        var inputs = document.getElementsByClassName('search-input');
+                        myArray.forEach.call(inputs, function(input) {
+                            input.oninput = _onInputSearch;
+                        });
+                    }
+                };
+            })(Array.prototype);
+
+            document.addEventListener('readystatechange', function() {
+                if (document.readyState === 'complete') {
+                    TableFilter.init();
+                }
+            });
+
+        })(document);
+
+    </script>
+
+</body>
+</html>

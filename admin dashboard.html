@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>International Library</title>
+<meta name="description" content="website description" />
+<meta name="keywords" content="website keywords, website keywords" />
+<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+<link rel="stylesheet" type="text/css" href="style/style.css" />
+<script src="index.js"></script>
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-
+awesome.min.css">
+</head>
+<body>
+<div id="main">
+<div id="header">
+<div id="logo">
+<div id="logo_text">
+<!-- class="logo_colour", allows you to change the colour of the text -->
+<h1><a href="index.html">International<span class="logo_colour">Library</span></a></h1>
+<h2>Online platform for all book lovers.</h2>
+</div>
+</div>
+<div id="menubar">
+<ul id="menu">
+<li class="selected"><a href="Admin Dashboard.html">Admin Dashboard</a></li>
+<li><a href="admin login.html">log out</a></li>
+</ul>
+<br></br>
+<br>></br>
+
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+  <br></br>
+  <br></br>
+<h2>BOOK DETAILS:</h2>
+
+<table id="myTable">
+  <tr>
+    <th>Serial no</th>
+    <th>Book id</th>
+    <th>Book name</th>
+    <th>Author's name</th>
+  </tr>
+  <tr>
+    <th>1</th>
+    <th>2456</th>
+    <th>pride and prejudice</th>
+    <th>jane austin</th>
+  </tr>
+</table>
+<button onclick="myCreateFunction()">Add</button>
+<button onclick="myDeleteFunction()">Delete</button>
+<br></br>
+<br></br>
+     <h3>
+            <span>STUDENT DETAILS:</span>
+            <input type="search" placeholder="Search..." class="form-control search-input" data-table="customers-list"/>
+        </h3>
+        <table class="table table-striped mt32 customers-list">
+            <thead>
+                <tr>
+                    <th>Serial No</th>
+                    <th>Student id</th>
+                    <th>Name</th>
+                    <th>No of Books issued</th>
+                    <th>Contact no</th>
+                    <th>Email id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ana Trujillo</td>
+                    <td>Ana.trujillo@gmail.com</td>
+                    <td>050214</td>
+                    <td>Germany</td>
+                    <td>sad@gmail.com</td>
+
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Antonio Moreno</td>
+                    <td>antoniomoreno2@gmail.com</td>
+                    <td>12209</td>
+                    <td>Mexico</td>
+                    <td>sad@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Maria Anders</td>
+                    <td>mariaanders@yahoo.com</td>
+                    <td>05021</td>
+                    <td>Germany</td>
+                    <td>sad@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Thomas Hardy</td>
+                    <td>hardythomas.90@gmail.com</td>
+                    <td>WA1 1DP</td>
+                    <td>United Kingdom</td>
+                    <td>sad@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Christina Berglund</td>
+                    <td>christina@outlook.com</td>
+                    <td>S-958 22</td>
+                    <td>Sweden</td>
+                    <td>sad@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Davolio Nancy</td>
+                    <td>nancy.davolio@gmail.com</td>
+                    <td>810025</td>
+                    <td>India</td>
+                    <td>sad@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Fuller Andrew</td>
+                    <td>andrew.10@yahoo.com</td>
+                    <td>W23 458</td>
+                    <td>United State</td>
+                    <td>sad@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Leverling Janet</td>
+                    <td>leverling.j@gmail.com</td>
+                    <td>T5A 0B5</td>
+                    <td>Canada</td>
+                    <td>sad@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        (function(document) {
+            'use strict';
+
+            var TableFilter = (function(myArray) {
+                var search_input;
+
+                function _onInputSearch(e) {
+                    search_input = e.target;
+                    var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+                    myArray.forEach.call(tables, function(table) {
+                        myArray.forEach.call(table.tBodies, function(tbody) {
+                            myArray.forEach.call(tbody.rows, function(row) {
+                                var text_content = row.textContent.toLowerCase();
+                                var search_val = search_input.value.toLowerCase();
+                                row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                            });
+                        });
+                    });
+                }
+
+                return {
+                    init: function() {
+                        var inputs = document.getElementsByClassName('search-input');
+                        myArray.forEach.call(inputs, function(input) {
+                            input.oninput = _onInputSearch;
+                        });
+                    }
+                };
+            })(Array.prototype);
+
+            document.addEventListener('readystatechange', function() {
+                if (document.readyState === 'complete') {
+                    TableFilter.init();
+                }
+            });
+
+        })(document);
+        
+    </script>
+
+<script>
+function myCreateFunction() {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(2);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  cell1.innerHTML = "2";
+  cell2.innerHTML = "345";
+  cell3.innerHTML = "hollow man";
+  cell4.innerHTML = "ishaan gupta";
+}
+
+function myDeleteFunction() {
+  document.getElementById("myTable").deleteRow(2);
+}
+</script>
+</body>
+</html>
